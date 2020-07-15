@@ -1,11 +1,20 @@
 import 'dart:math';
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:portfoliofs/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class HeaderScreen extends StatelessWidget {
+import 'data/data.dart';
+
+class HeaderScreen extends StatefulWidget {
+  @override
+  _HeaderScreenState createState() => _HeaderScreenState();
+}
+
+class _HeaderScreenState extends State<HeaderScreen> {
+
   @override
   Widget build(BuildContext context) {
     final nameWidget = "Florence Arnold\nSuller."
@@ -64,11 +73,39 @@ class HeaderScreen extends StatelessWidget {
   }
 }
 
-class IntroductionWidget extends StatelessWidget {
+class IntroductionWidget extends StatefulWidget {
   const IntroductionWidget({
     Key key,
   }) : super(key: key);
 
+  @override
+  _IntroductionWidgetState createState() => _IntroductionWidgetState();
+}
+
+class _IntroductionWidgetState extends State<IntroductionWidget> {
+
+  static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    keywords: <String>['Portofolio', 'Info'],
+    nonPersonalizedAds: true,
+  );
+
+  RewardedVideoAd videoAd = RewardedVideoAd.instance;
+  static const _adRewardedUnitID = "ca-app-pub-7246721390383587/7764747360";
+
+  @override
+  void initState() {
+    FirebaseAdMob.instance.initialize(appId: admobAppID);
+
+    super.initState();
+    videoAd.load(
+        adUnitId: _adRewardedUnitID,
+        targetingInfo: targetingInfo);
+
+    videoAd.listener =
+        (RewardedVideoAdEvent event, {String rewardType, int rewardAmount}) {
+      print("REWARDED VIDEO AD $event");
+    };
+  }
   @override
   Widget build(BuildContext context) {
     return VStack(
@@ -81,7 +118,7 @@ class IntroductionWidget extends StatelessWidget {
               "\n My known skills are Java, Kotlin, Objective-C, C# and Flutter."
           "\n"
           "\n I work closely to the Project Manager, experienced in agile project management, had published multiple Apps on PlayStore and AppStore."
-              "\nCurrently at work on BeeStripe LLC"
+              "\nCurrently at work on EMAPTA"
               "\nBut open for other projects"
               .text
               .white
@@ -95,13 +132,13 @@ class IntroductionWidget extends StatelessWidget {
         ].vStack(),
         RaisedButton(
           onPressed: () {
-            launch("https://www.beestripe.com");
+            videoAd.show();
           },
           hoverColor: Vx.purple700,
           shape: Vx.roundedSm,
           color: Colors.amber,
           textColor: Coolors.primaryColor,
-          child: "Visit beestripe.com".text.make(),
+          child: "For Support Click Here".text.make(),
         ).h(50)
       ],
       // crossAlignment: CrossAxisAlignment.center,

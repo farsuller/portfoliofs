@@ -15,7 +15,7 @@ class FooterScreen extends StatelessWidget {
             [
               "Got a project?\nLet's talk.".text.center.white.xl2.make(),
               10.heightBox,
-              "fars2020@gmail.com"
+              "florence.suller@gmail.com"
                   .text
                   .color(Colors.amber)
                   .semiBold
@@ -32,7 +32,7 @@ class FooterScreen extends StatelessWidget {
             [
               "Got a project?\nLet's talk.".text.center.white.xl2.make(),
               10.widthBox,
-              "fars2020@gmail.com"
+              "florence.suller@gmail.com"
                   .text
                   .color(Coolors.accentColor)
                   .semiBold

@@ -1,3 +1,5 @@
+const String admobAppID = "ca-app-pub-7246721390383587~3713999322";
+
 List<String> images = [
 //  "assets/image_01.png",
 //  "assets/image_04.jpg",
