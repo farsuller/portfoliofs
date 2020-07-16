@@ -132,7 +132,18 @@ class _IntroductionWidgetState extends State<IntroductionWidget> {
         ].vStack(),
         RaisedButton(
           onPressed: () {
+            try{
+              Future.delayed(const Duration(seconds: 1), () {
+                setState(() {
+                  videoAd.load(
+                      adUnitId: _adRewardedUnitID,
+                      targetingInfo: targetingInfo);
+                });
+              });
+            }catch(e){}
             videoAd.show();
+
+
           },
           hoverColor: Vx.purple700,
           shape: Vx.roundedSm,

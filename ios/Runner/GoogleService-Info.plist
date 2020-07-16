@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>982721895130-eaj1co4dn2t938g5mieqids5k59rhr4k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.982721895130-eaj1co4dn2t938g5mieqids5k59rhr4k</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>982721895130-odcsl73tbklrd3kumu4h6gd4tp8cvq1d.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBTPyQ2a80fl_rLWlwAFAScctrXoJ3xj3A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>982721895130</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.portfolio.portfoliofs</string>
+	<key>PROJECT_ID</key>
+	<string>portfoliofs-35e91</string>
+	<key>STORAGE_BUCKET</key>
+	<string>portfoliofs-35e91.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:982721895130:ios:e4c5e6b8191d65dc5063e3</string>
+	<key>DATABASE_URL</key>
+	<string>https://portfoliofs-35e91.firebaseio.com</string>
+</dict>
+</plist>
